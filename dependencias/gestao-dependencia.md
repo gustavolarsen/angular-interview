@@ -1,6 +1,6 @@
 # Como fazer a gestão de dependência do angular e qual o seu ciclo de vida?
 
-No Angular, a gestão de dependências é feita principalmente através do sistema de injeção de dependência (Dependency Injection, DI). Este sistema permite que você injete serviços, que são classes que contêm lógica de negócios ou funcionalidade compartilhada, em componentes e outros serviços de maneira eficiente e testável.
+No Angular, a gestão de dependências é feita principalmente através do sistema de injeção de dependência (Dependency Injection, DI). Este sistema permite que você injete serviços, que são classes que contêm lógica de negócios ou funcionalidade compartilhada, em componentes e outros serviços.
 
 ### Gerenciamento de Dependências no Angular
 
@@ -37,6 +37,7 @@ No Angular, a gestão de dependências é feita principalmente através do siste
 
 ### Tempo de Vida da Injeção de Dependência
 
+A gestão de dependência no Angular é feita através de provedores declarados em diferentes níveis (root, módulo, componente), controlando assim o tempo de vida dos serviços.
 O tempo de vida de um serviço depende de onde ele é provido:
 
 1. **Root Injector:**
@@ -49,8 +50,6 @@ O tempo de vida de um serviço depende de onde ele é provido:
    - **Component Scope:** Quando um serviço é declarado no `providers` de um componente, uma nova instância do serviço é criada para cada instância do componente. Isso significa que cada componente e seus filhos terão sua própria instância do serviço.
 
 ### Exemplo de Gestão de Dependência
-
-Aqui está um exemplo simples de como gerenciar dependências em um aplicativo Angular:
 
 ```typescript
 // my-service.ts
@@ -87,7 +86,3 @@ export class MyComponent implements OnInit {
 ```
 
 Neste exemplo, `MyService` é injetado em `MyComponent`. Se `MyService` fosse provido no `root`, haveria uma única instância para todo o aplicativo. Como ele é provido no `providers` do componente, cada instância de `MyComponent` teria sua própria instância de `MyService`.
-
-### Conclusão
-
-A gestão de dependência no Angular é feita através de provedores declarados em diferentes níveis (root, módulo, componente), controlando assim o tempo de vida dos serviços. Ao entender essa hierarquia e os diferentes escopos, você pode gerenciar dependências de forma eficiente e criar aplicativos modulares e testáveis.
