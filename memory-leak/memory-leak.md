@@ -23,11 +23,22 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
        this.destroy$.complete();
      }
      ```
+### 2. **Destruição de Serviços Singleton**
+   - Para serviços que são fornecidos no nível do módulo (`providedIn: 'root'`), certifique-se de que você não está mantendo referências desnecessárias que podem impedir a coleta de lixo.
 
-### 2. **Evitar Manipulação Direta do DOM**
+### 3. **Uso de Async Pipe**
+   - Utilize o `async` pipe nos templates para se inscrever e desinscrever automaticamente de observáveis.
+
+     ```html
+     <div *ngIf="data$ | async as data">
+       {{ data }}
+     </div>
+     ```
+     
+### 4. **Evitar Manipulação Direta do DOM**
    - Use os mecanismos do Angular (como `@ViewChild` e `Renderer2`) para manipular o DOM em vez de acessar diretamente elementos DOM com `document.querySelector` ou `element.nativeElement`.
 
-### 3. **Destruir Timers e Intervals**
+### 5. **Destruir Timers e Intervals**
    - Certifique-se de limpar quaisquer `setTimeout`, `setInterval` ou `requestAnimationFrame` que você criou.
      ```typescript
      private intervalId: any;
@@ -45,7 +56,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
      }
      ```
 
-### 4. **Evitando Detecção de Mudanças Excessiva**
+### 6. **Evitando Detecção de Mudanças Excessiva**
    - Utilize a estratégia de detecção de mudanças `OnPush` quando possível para reduzir a carga de detecção de mudanças.
      ```typescript
      @Component({
@@ -56,17 +67,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
      export class MyComponent { }
      ```
 
-### 5. **Uso Correto de Diretivas e Componentes**
+### 7. **Uso Correto de Diretivas e Componentes**
    - Certifique-se de remover corretamente quaisquer diretivas ou componentes dinâmicos adicionados através de `ComponentFactoryResolver`.
 
-### 6. **Destruição de Serviços Singleton**
-   - Para serviços que são fornecidos no nível do módulo (`providedIn: 'root'`), certifique-se de que você não está mantendo referências desnecessárias que podem impedir a coleta de lixo.
 
-### 7. **Uso de Async Pipe**
-   - Utilize o `async` pipe nos templates para se inscrever e desinscrever automaticamente de observáveis.
-
-     ```html
-     <div *ngIf="data$ | async as data">
-       {{ data }}
-     </div>
-     ```
