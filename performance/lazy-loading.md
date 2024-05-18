@@ -77,6 +77,4 @@ Para ilustrar o uso de `loadComponent`, considere o seguinte exemplo:
 - **Simplicidade**: Reduz a complexidade de gerenciar múltiplos módulos, especialmente em aplicações menores ou em cenários onde apenas alguns componentes precisam ser carregados sob demanda.
 - **Performance**: Carrega apenas o que é necessário, otimizando o desempenho em casos onde módulos completos não são necessários.
 
-### Conclusão
-
 Ambas as abordagens, `loadChildren` e `loadComponent`, têm seus méritos e são adequadas para diferentes cenários. `loadChildren` é ideal para modularizar grandes seções da aplicação, enquanto `loadComponent` oferece uma maneira mais direta de carregar componentes específicos sob demanda. A escolha entre eles depende das necessidades específicas da aplicação e da estrutura desejada.
