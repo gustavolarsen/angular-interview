@@ -1,4 +1,4 @@
-# Como controlar vazementos de memória (Memory leak)
+# Como controlar vazamentos de memória (Memory leak)
 
 Controlar leaks de memória é crucial para manter a performance e a eficiência da aplicação ao longo do tempo. Existem algumas algumas práticas recomendadas para ajudar a controlar e mitigar vazamentos de memória em Angular:
 
