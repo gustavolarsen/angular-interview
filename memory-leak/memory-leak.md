@@ -4,6 +4,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
 
 ### 1. **Gerenciamento de Assinaturas**
    - **Unsubscribe**: Sempre desinscreva-se de observáveis (`Observables`) quando o componente for destruído. Utilize o operador `takeUntil` ou mantenha uma referência às assinaturas e chame o `unsubscribe` manualmente.
+     
      ```typescript
      import { Subject } from 'rxjs';
      import { takeUntil } from 'rxjs/operators';
@@ -23,6 +24,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
        this.destroy$.complete();
      }
      ```
+     
 ### 2. **Destruição de Serviços Singleton**
    - Para serviços que são fornecidos no nível do módulo (`providedIn: 'root'`), certifique-se de que você não está mantendo referências desnecessárias que podem impedir a coleta de lixo.
 
@@ -40,6 +42,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
 
 ### 5. **Destruir Timers e Intervals**
    - Certifique-se de limpar quaisquer `setTimeout`, `setInterval` ou `requestAnimationFrame` que você criou.
+
      ```typescript
      private intervalId: any;
 
@@ -58,6 +61,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
 
 ### 6. **Evitando Detecção de Mudanças Excessiva**
    - Utilize a estratégia de detecção de mudanças `OnPush` quando possível para reduzir a carga de detecção de mudanças.
+
      ```typescript
      @Component({
        selector: 'app-my-component',
