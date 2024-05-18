@@ -1,6 +1,6 @@
 # Conceitos que todo dev Angular precisa saber
 
-Estou colocando neste repositório conceitos sobre Angular que venho estudando para me aperfeiçoar nesta tecnologia e para que me sirva de guia em possíveis entrivistas de emprego. Logo ele pode ser atualizado com novos conteúdos e conceitos.
+Estou colocando neste repositório conceitos sobre Angular que venho estudando para me aperfeiçoar nesta tecnologia e para que me sirva de guia em possíveis entrivistas de emprego.
 
 ## 1 - Gestão e injeção de dependências
 
