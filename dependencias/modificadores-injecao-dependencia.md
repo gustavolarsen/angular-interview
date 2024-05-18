@@ -1,6 +1,6 @@
 # Quais são os modificadores de injeção de dependência?
 
-No Angular, a injeção de dependência (Dependency Injection, DI) é uma técnica que permite que as dependências de uma classe sejam fornecidas em vez de serem criadas pela própria classe. Isso promove um código mais modular e testável. Existem vários modificadores que você pode usar para controlar como e onde as dependências são injetadas. Aqui estão os principais:
+No Angular, a injeção de dependência (Dependency Injection, DI) é uma técnica que permite que as dependências de uma classe sejam fornecidas em vez de serem criadas pela própria classe. Isso promove um código mais modular e testável. Existem vários modificadores que você pode usar para controlar como e onde as dependências são injetadas.
 
 1. **@Injectable()**: Este decorador marca uma classe como disponível para ser fornecida e injetada como uma dependência. Você pode especificar o provedor da classe dentro deste decorador.
    ```typescript
