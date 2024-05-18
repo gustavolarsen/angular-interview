@@ -1,3 +1,5 @@
+# Por que não é necessário Unsbscribe quando usamos Observables nas chamadas de API com HTTPClient?
+
 No caso das chamadas HTTP com `HttpClient` no Angular, não é necessário se desinscrever manualmente dos observables. Isso ocorre porque os observables retornados pelo `HttpClient` são do tipo "completáveis", ou seja, eles emitem um valor único e depois completam automaticamente. 
 Uma vez que um observable completa, ele libera os recursos associados, o que significa que não há risco de vazamento de memória associado a esses observables específicos.
 
