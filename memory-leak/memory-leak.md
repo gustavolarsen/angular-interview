@@ -62,14 +62,7 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
 ### 6. **Destruição de Serviços Singleton**
    - Para serviços que são fornecidos no nível do módulo (`providedIn: 'root'`), certifique-se de que você não está mantendo referências desnecessárias que podem impedir a coleta de lixo.
 
-### 7. **Profiling e Ferramentas de Diagnóstico**
-   - Utilize ferramentas como Chrome DevTools, o Angular DevTools e bibliotecas como RxJS DevTools para monitorar e diagnosticar possíveis vazamentos de memória.
-   - No Chrome DevTools, você pode tirar snapshots de heap e comparar para identificar objetos que não foram coletados pelo garbage collector.
-
-### 8. **Evitar Variáveis Globais**
-   - Evite o uso de variáveis globais que podem reter referências indesejadas na memória.
-
-### 9. **Uso de Async Pipe**
+### 7. **Uso de Async Pipe**
    - Utilize o `async` pipe nos templates para se inscrever e desinscrever automaticamente de observáveis.
 
      ```html
@@ -77,6 +70,3 @@ Controlar leaks de memória é crucial para manter a performance e a eficiência
        {{ data }}
      </div>
      ```
-
-### 10. **Desalocação de Recursos**
-   - Certifique-se de desalocar corretamente quaisquer recursos, como objetos grandes, conexões de WebSocket ou recursos nativos que você tenha alocado.
