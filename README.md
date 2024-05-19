@@ -16,3 +16,4 @@ Estou colocando neste repositório conceitos sobre Angular que venho estudando p
 
 #### 3.1 - [Explique o lazy loading e por quê deve ser utilizado?](performance/lazy-loading.md)
 #### 3.2 - [Como funciona o OnPush e como ele ajuda a melhorar a performance da aplicação?](performance/onpush-strategy.md)
+#### 3.3 = [Conceito geral de Signals](performance/signals.md)
