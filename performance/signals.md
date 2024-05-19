@@ -1,6 +1,6 @@
 # O que é e como funciona o Signals no Angular?
 
-O Signal é um recurso novo do Angular que iniciou na v16 e cegou com mais força na v17 e que oferece uma maneira mais eficiente de gerenciar o estado das suas aplicações. Ele se baseia no conceito de **reactive programming**, permitindo que você construa interfaces de usuário reativas e otimizadas.
+O Signal é um recurso novo do Angular que iniciou na v16 e chegou com mais força na v17 e que oferece uma maneira mais eficiente de gerenciar o estado das suas aplicações. Ele se baseia no conceito de **reactive programming**, permitindo que você construa interfaces de usuário reativas e otimizadas.
 
 **Para que serve o Signal?**
 
